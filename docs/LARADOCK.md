@@ -2,7 +2,9 @@
 
 At the root of our project directory sits a Laradock folder. This folder contains a pre-built selection of Docker containers, that should facilitate easy local deployment. 
 
-In order to deploy using Laradock take the following steps:
+---
+
+####To setup the API with Laradock do the following:
 
 1. Install Docker locally: https://docs.docker.com/install/
 

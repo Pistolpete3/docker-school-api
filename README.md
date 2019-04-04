@@ -2,7 +2,7 @@
 
 This repository contains a simple API structure to facilitate basic school and product behaviors. 
 
-The API has been built using Laravel and can be deployed using any standard Laravel deployment process. I have also included a simple Laradock container to facilitate automated deployment through Docker. I would recommend deploying locally using one of three methods (this could also be done using Vagrant, etc):
+The API has been built using Laravel and can be deployed using any standard Laravel deployment process, my default in this case was [Valet](docs/VALET.md). I have also included a simple Laradock container to facilitate automated deployment through [Docker](docs/LARADOCK.md). I would recommend deploying locally using one of three methods (this could also be done using Vagrant, etc):
     
     1. Valet
         a. Install php, Composer, Laravel, MySQL, and Valet locally
@@ -23,9 +23,11 @@ The API has been built using Laravel and can be deployed using any standard Lara
         c. Configure the MySQL instance within the container and edit the project .env if necessary
         d. Run migrations and seeders
     
-I will provide additional detail on methods 1 and 3 later in this Readme. 
+I will provide additional detail on methods [1](docs/VALET.md) and [3](docs/LARADOCK.md) elsewhere in the documentation. 
 
 Production deployment would ideally be done using a Docker instance with a Jenkins build pipeline (or similar). I have not taken this project through to a full Jenkins build or tar ball state, simply due to time constraints. 
+
+---
 
 # Postman Collection and Documentation
 
