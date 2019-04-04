@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
  */
 class SchoolSeeder extends Seeder
 {
-    const SCHOOL_SEED_COUNT = 5;
+    const SCHOOL_SEED_COUNT = 500;
 
     /**
      * Run the database seeds.
