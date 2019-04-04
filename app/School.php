@@ -45,31 +45,4 @@ class School extends Model
     {
         return $filters->apply($query);
     }
-
-    public static function prepareBulkDownload(SchoolFilter $filter)
-    {
-        $columns = ['name', 'city', 'state', 'zip', 'circulation'];
-
-        $schools = School::filter($filter)->get();
-
-        $headers = [
-            'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
-            'Content-type' => 'text/csv',
-            'Content-Disposition' => 'attachment; filename=galleries.csv',
-            'Expires' => '0',
-            'Pragma' => 'public',
-        ];
-
-        $csvCallback = function () use ($schools, $columns) {
-            $handle = fopen('php://output', 'w');
-
-            fputcsv($handle, array_map('ucfirst', $columns));
-            foreach ($schools as $school) {
-                fputcsv($handle, $school->toArray());
-            }
-            fclose($handle);
-        };
-
-        return [$headers, $csvCallback];
-    }
 }

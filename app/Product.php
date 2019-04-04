@@ -4,6 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Product
+ *
+ * @package App
+ */
 class Product extends Model
 {
     protected $fillable = [
@@ -11,11 +16,18 @@ class Product extends Model
         'price',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function schools()
     {
         return $this->belongsToMany(School::class, 'school_products')->withPivot('price');
     }
 
+    /**
+     * @param int|null $count
+     * @return \App\Product[]|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
+     */
     public static function findBySchoolCount(int $count = null)
     {
         if (true == $count) {
@@ -27,8 +39,10 @@ class Product extends Model
         return Product::all();
     }
 
-
-
+    /**
+     * @param float $value
+     * @return mixed
+     */
     public static function findByValue(float $value)
     {
         $product = Product::first();
@@ -41,18 +55,5 @@ class Product extends Model
                 'value'         => $productSchool->pivot->price/$productSchool->circulation,
             ];
         });
-
-        //return Product::with('schools')->get()->map(function (Product $product){
-        //    $product->schools->map(function ($school) use ($product) {
-        //        return
-        //    })
-        //    return [
-        //        'school_id' => $product->
-        //        'school_name',
-        //        'product_id',
-        //        'product_name',
-        //        'value'
-        //    ];
-        //});
     }
 }
