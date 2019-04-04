@@ -25,7 +25,9 @@ class SchoolController extends Controller
      */
     public function showAllSchools(SchoolFilter $filter): AnonymousResourceCollection
     {
-        return SchoolResource::collection(School::with('products')->filter($filter)->get());
+        return SchoolResource::collection(
+            School::with('products')->filter($filter)->paginate()
+        );
     }
 
     /**

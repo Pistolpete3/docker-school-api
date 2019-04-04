@@ -50,7 +50,7 @@ class ProductController extends Controller
                 ->join('products', 'products.id', '=', 'school_products.product_id')
                 ->join('schools', 'schools.id', '=', 'school_products.school_id')
                 ->where('value', '>=', $request->has('value') ? $request->get('value') : 0)
-                ->get()
+                ->paginate()
         );
     }
 }
