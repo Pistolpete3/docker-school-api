@@ -1,6 +1,8 @@
 # School Product API
 
-This repository contains a simple API structure to facilitate basic school and product behaviors. 
+This repository contains a simple API structure to facilitate basic school and product behaviors. For an overview on my methods and basic design see here: [OVERVIEW.md](docs/OVERVIEW.md)
+
+--- 
 
 The API has been built using Laravel and can be deployed using any standard Laravel deployment process, my default in this case was [Valet](docs/VALET.md). I have also included a simple Laradock container to facilitate automated deployment through [Docker](docs/LARADOCK.md). I would recommend deploying locally using one of three methods (this could also be done using Vagrant, etc):
     
