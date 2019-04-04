@@ -35,7 +35,10 @@ class SchoolProductController extends Controller
     ): SchoolResource
     {
         $school->products()->syncWithoutDetaching([
-            $product->id => $request->only('price')
+            $product->id => [
+                'price' => $request->get('price'),
+                'value' => $request->get('price')/$school->circulation
+            ]
         ]);
         return new SchoolResource($school->load('products'));
     }
