@@ -4,7 +4,7 @@ At the root of our project directory sits a Laradock folder. This folder contain
 
 ---
 
-####To setup the API with Laradock do the following:
+###To setup the API with Laradock do the following:
 
 1. Install Docker locally: https://docs.docker.com/install/
 

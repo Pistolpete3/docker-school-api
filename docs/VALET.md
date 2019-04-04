@@ -5,7 +5,7 @@ While Docker offers great utility when working on teams or when trying to replic
 For local Laravel development I often prefer Valet. This small API prototype was a perfect Valet use case, simply stand up a new Laravel app in a parked directory and we are off to the races! 
 
 ---
-####To Setup the School API with Valet:
+###To Setup the School API with Valet:
 
 1. Configure Valet using the installation guide: https://laravel.com/docs/5.8/valet#installation
 
