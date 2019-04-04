@@ -24,7 +24,7 @@ In order to deploy using Laradock take the following steps:
 	
 		c) Create an empty db `create database schoolsApi;`
 	
-7. Go back to the project root directory and ensure Laravel's .env file MySQL credentials matches your docker instance. You may have to edit Laradock's default MySQL version to downgrade to MySQL 5.7
+7. Go back to the project root directory and ensure Laravel's .env file MySQL credentials matches your docker instance. You may want edit Laradock's default MySQL version of `latest` in the .env to `5.7` in order to avoid MySQL 8.0 complexities.
 
 		DB_CONNECTION=mysql
     	DB_HOST=mysql
