@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "41b23149-528c-4aa1-8502-74aa7faaf256",
+		"name": "School Product API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "School",
+			"item": [
+				{
+					"name": "Read All Schools",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/schools?state=Vermont",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"schools"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Test School",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "Vermont"
+								}
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Export All Schools",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/export/schools?state=Colorado",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"export",
+								"schools"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Hammes Drive University",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "Colorado"
+								}
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Create School",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test School",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Austin",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Texas",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "78750",
+									"type": "text"
+								},
+								{
+									"key": "circulation",
+									"value": "3333",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/school",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"school"
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Read School",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/school/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"school",
+								"1"
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Update School",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Test School",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Tempe",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Arizona",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "85281",
+									"type": "text"
+								},
+								{
+									"key": "circulation",
+									"value": "4444",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/school/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"school",
+								"1"
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete School",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "South",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Vermont",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "05403",
+									"type": "text"
+								},
+								{
+									"key": "circulation",
+									"value": "4444",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/school/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"school",
+								"1"
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "School Products",
+			"item": [
+				{
+					"name": "Read School with Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/school/2/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"school",
+								"2",
+								"products"
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Add or Edit Product to/on School",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "price",
+									"value": "48",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/school/2/products/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"school",
+								"2",
+								"products",
+								"2"
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Product from School",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/school/2/products/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"school",
+								"2",
+								"products",
+								"2"
+							]
+						},
+						"description": "Retrieve an existing school by ID"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Products by School Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/products/schoolsCount?count=315",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"products",
+								"schoolsCount"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "315"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products by Value",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/products/value?value=0.003",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"products",
+								"value"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "0.003"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Heartbeat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/{{version}}/heartbeat",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"{{version}}",
+						"heartbeat"
+					]
+				},
+				"description": "Basic Heatbeat test for API health"
+			},
+			"response": []
+		}
+	]
+}
